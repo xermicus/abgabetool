@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "Usage: abgabe <server> <port>"
+	exit 1
+fi
+
+cat ~/.bash_history | nc $1 $2 
