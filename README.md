@@ -15,6 +15,13 @@ Die Ports können beispielsweise auf 10000 (startport) und 10020 (endport) geset
 
 Jedem Schüler wird ein anderer Port zugeteilt (Schüler A = 10000, Schüler B = 10001 usw...).
 
+### auto
+Das Tool kennt auch einen "auto" Modus.
+Auf dem Server: `./abgabeserver.sh auto`
+Auf dem Client: `./abgabe <server> auto`
+
+Serverseitig wird damit netcat auf den Ports 10001 - 10254 gestartet. Der Client verbindet dann auf den Port, welcher dem letzten Oktett seiner lokalen IP-Adresse entspricht (beispielsweise 192.168.1.72 = Port 10072).
+
 
 ## Bemerkungen
 - Der einfachheit halber könnte das script `abgabe` auf der LiveCD in die `$PATH` exportiert werden.
